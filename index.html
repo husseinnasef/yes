@@ -1,134 +1,149 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hussein Nasef | YES! Magazine Style</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <title>Hussein Nasef | YES! Media Style</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* إعدادات التصميم الأساسية */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Source Sans Pro', sans-serif;
-            background-color: #ffffff;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        /* الهيدر - الجزء العلوي */
+        body { margin: 0; padding: 0; font-family: 'Source Sans Pro', sans-serif; background-color: #ffffff; color: #333; }
+        
+        /* --- Header Section --- */
         header {
-            border-bottom: 1px solid #ddd;
-            padding: 20px 0;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
         }
-
-        /* حاوية اللوجو مع رابط للموقع الأصلي */
-        .logo-container {
-            display: inline-block;
-            transition: opacity 0.3s ease;
-        }
-
-        .logo-container:hover {
-            opacity: 0.8;
-        }
-
-        /* تنسيق اللوجو المدمج */
-        .svg-logo {
-            width: 90px; /* تحكم في حجم اللوجو من هنا */
-            height: auto;
-            display: block;
-        }
-
-        /* محتوى المقال */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            text-align: left; /* المقال بالإنجليزية كما طلبت */
-            direction: ltr;
-        }
-
-        .category {
-            color: #e31b23; /* اللون الأحمر الدقيق */
-            text-transform: uppercase;
-            font-weight: bold;
+        .menu-icon { font-size: 30px; cursor: pointer; }
+        .header-logo { height: 50px; cursor: pointer; }
+        .donate-btn-top {
+            color: #e31b23;
+            text-decoration: none;
+            font-weight: 900;
             font-size: 14px;
             letter-spacing: 1px;
-            margin-bottom: 10px;
-            display: block;
         }
 
-        h1 {
-            font-family: 'Playfair Display', serif; /* خط سيريف كلاسيكي للعناوين */
-            font-size: 48px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            color: #000;
+        /* --- Article Section --- */
+        .article-content {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .main-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
             font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 10px;
         }
-
-        .article-meta {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 30px;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-            padding: 10px 0;
-        }
-
-        .content p {
-            font-size: 19px;
-            color: #333;
+        .sub-headline {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #555;
             margin-bottom: 25px;
         }
+        .big-donate-btn {
+            background-color: #e31b23;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 40px;
+        }
 
-        /* استجابة الموقع للهواتف */
-        @media (max-width: 600px) {
-            h1 { font-size: 32px; }
-            .container { margin: 20px auto; }
-            .svg-logo { width: 70px; }
+        /* --- Footer Section --- */
+        footer {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            border-top: 1px dotted #ccc;
+            text-align: center;
+        }
+        .footer-logo { width: 80px; margin-bottom: 20px; }
+        .footer-nav { list-style: none; padding: 0; margin-bottom: 30px; }
+        .footer-nav li { margin-bottom: 15px; }
+        .footer-nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .footer-secondary-nav a {
+            color: #7a9cb3; /* اللون الأزرق الفاتح في الصورة */
+            display: block;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        .social-icons { margin: 20px 0; font-size: 24px; color: #7a9cb3; }
+        .copyright-text {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+            max-width: 400px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="https://www.yesmagazine.org/" target="_blank" class="logo-container">
-            <svg class="svg-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100" height="100" fill="#e31b23"/>
-                <text x="50%" y="65%" font-family="'Playfair Display', serif" font-size="42" fill="white" font-weight="900" text-anchor="middle">yes!</text>
-            </svg>
+        <div class="menu-icon">☰</div>
+        <a href="https://www.yesmagazine.org/">
+            <img src="site-logo.jpg" alt="Logo" class="header-logo">
         </a>
+        <a href="#" class="donate-btn-top">DONATE</a>
     </header>
 
-    <main class="container">
-        <span class="category">Current Events</span>
+    <section class="article-content">
+        <h1 class="main-headline">Hussein Nasef, brought life into Egypt once again</h1>
+        <p class="sub-headline">Donate to YES! today.</p>
+        <a href="#" class="big-donate-btn">DONATE</a>
         
-        <h1>Hussein Nasef, brought life into Egypt once again</h1>
+        <div style="text-align: left; direction: ltr; margin-top: 40px;">
+            <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</p>
+        </div>
+    </section>
+
+    <footer>
+        <img src="site-logo.jpg" alt="Footer Logo" class="footer-logo">
         
-        <div class="article-meta">
-            By <strong>Editorial Staff</strong> | May 5, 2026
+        <ul class="footer-nav">
+            <li><a href="#">Environmental Justice</a></li>
+            <li><a href="#">Racial Justice</a></li>
+            <li><a href="#">Body Politics</a></li>
+            <li><a href="#">Political Power</a></li>
+            <li><a href="#">Economic Power</a></li>
+            <li><a href="#">Current Issue</a></li>
+        </ul>
+
+        <div class="footer-secondary-nav">
+            <a href="#">Get YES! Emails</a>
+            <a href="#">About</a>
+            <a href="#">Magazine</a>
+            <a href="#">Follow</a>
         </div>
 
-        <div class="content">
-            <p>
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
-            </p>
-            <p>
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
-            </p>
-            <p>
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
-            </p>
+        <div class="social-icons">
+            <span>f t i p in 🌐</span>
         </div>
-    </main>
+
+        <div class="copyright-text">
+            © 2026 YES! Media / Positive Futures Network<br>
+            PO BOX 1219, POULSBO, WA 98370<br>
+            YES! Media acknowledges that we are based on the traditional, stolen land of the Coast Salish People...
+        </div>
+    </footer>
 
 </body>
 </html>
