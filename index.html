@@ -23,20 +23,20 @@
             text-align: center;
         }
 
-        /* اللوجو وتنسيقه */
+        /* حاوية اللوجو مع رابط للموقع الأصلي */
         .logo-container {
             display: inline-block;
-            background-color: #e31b23; /* اللون الأحمر الخاص بـ YES */
-            padding: 15px;
             transition: opacity 0.3s ease;
         }
 
         .logo-container:hover {
-            opacity: 0.9;
+            opacity: 0.8;
         }
 
-        .logo-container img {
-            height: 60px; /* تحكم في حجم اللوجو من هنا */
+        /* تنسيق اللوجو المدمج */
+        .svg-logo {
+            width: 90px; /* تحكم في حجم اللوجو من هنا */
+            height: auto;
             display: block;
         }
 
@@ -50,7 +50,7 @@
         }
 
         .category {
-            color: #e31b23;
+            color: #e31b23; /* اللون الأحمر الدقيق */
             text-transform: uppercase;
             font-weight: bold;
             font-size: 14px;
@@ -60,7 +60,7 @@
         }
 
         h1 {
-            font-family: 'Playfair+Display', serif;
+            font-family: 'Playfair Display', serif; /* خط سيريف كلاسيكي للعناوين */
             font-size: 48px;
             line-height: 1.1;
             margin-bottom: 20px;
@@ -77,15 +77,17 @@
             padding: 10px 0;
         }
 
-        .content {
+        .content p {
             font-size: 19px;
             color: #333;
+            margin-bottom: 25px;
         }
 
         /* استجابة الموقع للهواتف */
         @media (max-width: 600px) {
             h1 { font-size: 32px; }
             .container { margin: 20px auto; }
+            .svg-logo { width: 70px; }
         }
     </style>
 </head>
@@ -93,12 +95,15 @@
 
     <header>
         <a href="https://www.yesmagazine.org/" target="_blank" class="logo-container">
-            <img src="site-logo.svg" alt="YES! Logo">
+            <svg class="svg-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" fill="#e31b23"/>
+                <text x="50%" y="65%" font-family="'Playfair Display', serif" font-size="42" fill="white" font-weight="900" text-anchor="middle">yes!</text>
+            </svg>
         </a>
     </header>
 
     <main class="container">
-        <span class="category">Social Justice</span>
+        <span class="category">Current Events</span>
         
         <h1>Hussein Nasef, brought life into Egypt once again</h1>
         
@@ -107,6 +112,11 @@
         </div>
 
         <div class="content">
+            <p>
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.
+            </p>
             <p>
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
